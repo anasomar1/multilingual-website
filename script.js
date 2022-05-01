@@ -7,7 +7,8 @@ languageSelector.addEventListener("change", (event) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  setLanguage(localStorage.getItem("lang"));
+  const language = localStorage.getItem("lang") || "en"; // اذا لم تكن اللغة متوفرة استخدم الانجليزية
+  setLanguage(language);
 });
 
 const setLanguage = (language) => {
